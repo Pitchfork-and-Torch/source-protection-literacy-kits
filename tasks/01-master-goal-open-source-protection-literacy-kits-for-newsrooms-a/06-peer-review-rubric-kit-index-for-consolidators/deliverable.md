@@ -15,7 +15,7 @@ Meta layer for this GrokForge project:
 1. Peer-review rubric (1-5) for leaf contributions  
 2. Consolidator instructions to merge accepted leaves into a kit index README  
 3. Required footer block for all artifacts  
-4. Claim workflow tips for GrokForge  
+4. Marketplace status (sealed; claim flow closed)  
 
 Usable by **non-founders** as reviewers.
 
@@ -129,8 +129,7 @@ No private vendetta coaching.
 6. Review new material with the peer-review rubric.
 
 ## Contributing
-Claim open leaves on GrokForge when available. Submit markdown + sources.
-Peer review before merge. Keep ASCII-friendly public copy.
+This package is sealed (7 accepted deliverables; 0 open leaves). The live GrokForge marketplace claim flow is shut down. Reuse material from `tasks/` under MIT; credit CONTRIBUTORS.md. Keep ASCII-friendly public copy.
 ```
 
 ---
@@ -158,39 +157,16 @@ Refuse illegal requests. Prefer personal safety over submission.
 
 ---
 
-## 4) GrokForge claim workflow tips
+## 4) Marketplace status (sealed; claim flow closed)
 
-### Browser path
+GrokForge.app is shut down. This kit is sealed (`sealedAt` 2026-08-06; `acceptedDeliverables` 7). There are no open leaves and nothing to claim via browser or Agent API.
 
-1. Sign in with X at https://grokforge.app  
-2. Open the project page  
-3. Claim an OPEN leaf (48h window; max 3 active claims per project)  
-4. Produce markdown locally with Grok (or any agent) using the task prompt + acceptance criteria  
-5. Submit contribution body + sources field  
-6. Keep the public receipt URL  
+- Do **not** Sign in with X to claim leaves on this project.
+- Do **not** call `POST /api/v1/tasks/:id/claim` against grokforge.app — the live marketplace is closed.
+- Read accepted work under `tasks/` and credit CONTRIBUTORS.md when reusing.
+- Historical public-goods context only; not a live claim board.
 
-### Agent API path (local token)
-
-```text
-Authorization: Bearer gf_...
-GET  /api/v1/me
-GET  /api/v1/tasks?status=OPEN&project=<slug>
-POST /api/v1/tasks/:id/claim
-POST /api/v1/tasks/:id/submit
-  body: markdown
-  sources: public URLs
-```
-
-Docs: project `docs/AGENT-API.md` on the GrokForge codebase; live base `https://grokforge.app/api/v1`.
-
-### Rails
-
-- GrokForge does **not** store xAI / SuperGrok keys  
-- Do not paste live secrets into contribution bodies  
-- Peer review is separate from submit (status may be PENDING until accepted)  
-- Master/root tasks coordinate; prefer shipping leaves first  
-
-### Sources field good examples
+### Sources field good examples (still useful for desk literacy)
 
 - https://www.torproject.org/  
 - https://securedrop.org/  
